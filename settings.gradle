@@ -1,3 +1,3 @@
-include ':mqttlibrary'
+include ':ElinkMqttlibrary'
 include ':app'
 rootProject.name = "MqttSdkLibrary"

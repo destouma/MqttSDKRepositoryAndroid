@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -14,5 +15,109 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_device_imei"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="861193040474968"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="10dp"
+        android:background="@null"
+        android:maxLength="15"
+        android:digits="0123456789"
+        />
+    <Button
+        android:id="@+id/btn_device_imei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/et_device_imei"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="绑定设备"
+        />
+
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn"
+        android:layout_height="wrap_content"
+        android:text="112233"
+        app:layout_constraintTop_toBottomOf="@id/et_device_imei"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/et"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="发送"
+        />
+
+
+    <EditText
+        android:id="@+id/et_ad"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn"
+        android:layout_height="wrap_content"
+        android:text="112233"
+        app:layout_constraintTop_toBottomOf="@id/et"
+        android:padding="10dp"
+        android:maxLength="30"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        />
+    <Button
+        android:id="@+id/btn_ad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/et_ad"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="发送广告"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_ad"
+        >
+
+        <Button
+            android:id="@+id/btn_heartbeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="心跳包"
+            />
+
+        <Button
+            android:id="@+id/btn_ota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OTA"
+            />
+
+        <Button
+            android:id="@+id/btn_volume_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="音量+"
+            />
+
+        <Button
+            android:id="@+id/btn_volume_less"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="音量-"
+            />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
