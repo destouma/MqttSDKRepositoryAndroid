@@ -28,9 +28,9 @@ public class MyApplication extends Application implements Application.ActivityLi
         super.onCreate();
         instance = this;
         registerActivityLifecycleCallbacks(this);//注册进入前台,后台的回调
-
+        //userId是唯一的,请自行输入,重复可能会导致mqtt连接互顶
         MqttSdk.initMqtt(this,1,"9d542167bd11229174438b1d69469349","mqtt-49");
-
+        L.init(this,true);
     }
 
 
